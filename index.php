@@ -39,14 +39,20 @@
   <body>
     <div class="container py-5">
       <h2>
-        <?php echo $dogs[3]["Breed"]; ?>
+        <?php //echo $dogs[3]["Name"]." is a ".$dogs[3]["Breed"]; ?>
       </h2>
       <pre>
         <?php //echo $json_dogs; ?>
       </pre>
       <pre>
-        <?php //print_r(json_decode($json_dogs, true)); ?>
+        <?php 
+        $decoded_dogs = json_decode($json_dogs, true);
+        //print_r($decoded_dogs);
+         ?>
       </pre>
+      <p>
+        <?php echo $decoded_dogs[1]["Name"]; ?>
+      </p>
 
     </div>
   </body>
